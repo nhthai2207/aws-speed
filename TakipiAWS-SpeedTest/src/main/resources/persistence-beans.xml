@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd"> 
+       <!---http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"-->
+	<context:property-placeholder location="classpath:persistent_dev.properties" />		
+	<context:annotation-config />
+
+
+	<!-- we will manage transactions with annotations >
+	<tx:annotation-driven  transaction-manager="transactionManager"/ -->
+
+	<!-- package to look for annotated classes -->
+	<context:component-scan base-package="com.billistic.dao.impl" />
+	
+	
+	<!-- data source for our database -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />			
+		<property name="url" value="jdbc:mysql://${dbhost}/billistic" />
+		<property name="username" value="${dbuser}" />
+		<property name="password" value="${dbpw}" />
+	</bean>
+
+	<bean id="queueDataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />			
+		<property name="url" value="jdbc:mysql://${dbhost}/QUEUE" />
+		<property name="username" value="${dbuser}" />
+		<property name="password" value="${dbpw}" />
+	</bean>
+
+	
+	<bean id="transactionManager"
+        class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+	<!-- configure hibernate session factory 
+		http://stackoverflow.com/questions/8565051/spring-3-1-hibernate-4-sessionfactory
+	-->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.billistic.model.AccountHistory</value>
+				<value>com.billistic.model.MasterBillers</value>
+				<value>com.billistic.model.MasterServicePlans</value>
+				<value>com.billistic.model.MyBillers</value>
+				<value>com.billistic.model.MyBills</value>
+				<value>com.billistic.model.MyPayments</value>
+				<value>com.billistic.model.MyPurchaseDetails</value>
+				<value>com.billistic.model.Notifications</value>
+				<value>com.billistic.model.Subscriber</value>
+				<value>com.billistic.model.SubscriberCreditSource</value>
+				<value>com.billistic.model.User</value>
+				<!-- value>com.billistic.model.MessageQueue</value-->
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<bean id="queueSessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="queueDataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.billistic.model.MessageQueue</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg type="javax.sql.DataSource" ref="dataSource" />
+	</bean>
+
+</beans>
