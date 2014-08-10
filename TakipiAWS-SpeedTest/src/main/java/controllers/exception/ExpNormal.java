@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  * GWT, Spring, Hibernate/JPA, Hadoop, and Java programming</a>.
  */
 
-@WebServlet("/exception/trade")
+@WebServlet("/exception/normal")
 public class ExpNormal extends HttpServlet {
 	private static Random random = new Random();
 

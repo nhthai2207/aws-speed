@@ -1,9 +1,2 @@
-/aop.xml
 /controllers
-/controllers.xml
-/log4j.properties
-/persistence-beans.xml
-/persistent_dev.properties
-/persistent_production.properties
 /services
-/sql
