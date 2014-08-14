@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [10/Aug/2014:10:25:26 +0700] "GET /takipi-aws/speed/wait100 HTTP/1.1" 200 3 http-bio-8080-exec-1 139
+0:0:0:0:0:0:0:1 - - [10/Aug/2014:14:16:12 +0700] "GET /takipi-aws/speed/wait100 HTTP/1.1" 200 3 http-bio-8080-exec-4 103
+0:0:0:0:0:0:0:1 - - [10/Aug/2014:14:16:16 +0700] "GET /takipi-aws/speed/wait100 HTTP/1.1" 200 3 http-bio-8080-exec-6 101
+0:0:0:0:0:0:0:1 - - [10/Aug/2014:14:16:24 +0700] "GET /takipi-aws/speed/normal HTTP/1.1" 200 3 http-bio-8080-exec-7 2
+0:0:0:0:0:0:0:1 - - [10/Aug/2014:14:19:23 +0700] "GET /takipi-aws/speed/res1mb HTTP/1.1" 200 12 http-bio-8080-exec-10 43848
+0:0:0:0:0:0:0:1 - - [10/Aug/2014:14:23:39 +0700] "GET /takipi-aws/speed/res1mb HTTP/1.1" 200 1049605 http-bio-8080-exec-3 12671
+0:0:0:0:0:0:0:1 - - [10/Aug/2014:14:23:58 +0700] "GET /takipi-aws/speed/res1mb HTTP/1.1" 200 1049605 http-bio-8080-exec-3 17
+0:0:0:0:0:0:0:1 - - [10/Aug/2014:14:35:33 +0700] "GET /takipi-aws/speed/res1mb HTTP/1.1" 200 1049605 http-bio-8080-exec-1 64
