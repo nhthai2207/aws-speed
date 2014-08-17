@@ -1,0 +1,605 @@
+Running in LATENCY domain
+LATENCY NORMAL:  1
+
+Lookup time:	0.125
+Connect time:	0.126
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.126
+StartXfer time:	0.129
+
+Total time:	0.129
+LATENCY NORMAL:  2
+
+Lookup time:	0.125
+Connect time:	0.126
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.126
+StartXfer time:	0.133
+
+Total time:	0.133
+LATENCY NORMAL:  3
+
+Lookup time:	1.516
+Connect time:	1.519
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	1.520
+StartXfer time:	1.524
+
+Total time:	1.524
+LATENCY NORMAL:  4
+
+Lookup time:	0.029
+Connect time:	0.032
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.032
+StartXfer time:	0.036
+
+Total time:	0.036
+LATENCY NORMAL:  5
+
+Lookup time:	0.066
+Connect time:	0.069
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.069
+StartXfer time:	0.073
+
+Total time:	0.074
+LATENCY NORMAL:  6
+
+Lookup time:	0.012
+Connect time:	0.013
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.014
+StartXfer time:	0.020
+
+Total time:	0.020
+LATENCY NORMAL:  7
+
+Lookup time:	0.013
+Connect time:	0.013
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.014
+StartXfer time:	0.016
+
+Total time:	0.016
+LATENCY NORMAL:  8
+
+Lookup time:	0.258
+Connect time:	0.261
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.261
+StartXfer time:	0.265
+
+Total time:	0.265
+LATENCY NORMAL:  9
+
+Lookup time:	0.126
+Connect time:	0.127
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.127
+StartXfer time:	0.129
+
+Total time:	0.129
+LATENCY NORMAL:  10
+
+Lookup time:	0.029
+Connect time:	0.030
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.032
+
+Total time:	0.032
+LATENCY WAIT 100ms:  1
+
+Lookup time:	0.130
+Connect time:	0.131
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.131
+StartXfer time:	0.235
+
+Total time:	0.235
+LATENCY WAIT 100ms:  2
+
+Lookup time:	0.029
+Connect time:	0.032
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.032
+StartXfer time:	0.135
+
+Total time:	0.135
+LATENCY WAIT 100ms:  3
+
+Lookup time:	0.129
+Connect time:	0.132
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.132
+StartXfer time:	0.236
+
+Total time:	0.236
+LATENCY WAIT 100ms:  4
+
+Lookup time:	0.012
+Connect time:	0.013
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.013
+StartXfer time:	0.116
+
+Total time:	0.116
+LATENCY WAIT 100ms:  5
+
+Lookup time:	0.029
+Connect time:	0.030
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.132
+
+Total time:	0.132
+LATENCY WAIT 100ms:  6
+
+Lookup time:	0.004
+Connect time:	0.006
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.006
+StartXfer time:	0.108
+
+Total time:	0.108
+LATENCY WAIT 100ms:  7
+
+Lookup time:	0.126
+Connect time:	0.127
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.127
+StartXfer time:	0.230
+
+Total time:	0.230
+LATENCY WAIT 100ms:  8
+
+Lookup time:	0.126
+Connect time:	0.127
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.127
+StartXfer time:	0.237
+
+Total time:	0.238
+LATENCY WAIT 100ms:  9
+
+Lookup time:	0.030
+Connect time:	0.031
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.031
+StartXfer time:	0.134
+
+Total time:	0.134
+LATENCY WAIT 100ms:  10
+
+Lookup time:	0.012
+Connect time:	0.016
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.016
+StartXfer time:	0.119
+
+Total time:	0.119
+LATENCY DOWNLOAD 1Mb:  1
+
+Lookup time:	0.004
+Connect time:	0.005
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.006
+StartXfer time:	0.009
+
+Total time:	0.049
+LATENCY DOWNLOAD 1Mb:  2
+
+Lookup time:	0.014
+Connect time:	0.015
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.015
+StartXfer time:	0.021
+
+Total time:	0.074
+LATENCY DOWNLOAD 1Mb:  3
+
+Lookup time:	0.022
+Connect time:	0.025
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.025
+StartXfer time:	0.028
+
+Total time:	0.079
+LATENCY DOWNLOAD 1Mb:  4
+
+Lookup time:	0.022
+Connect time:	0.025
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.025
+StartXfer time:	0.028
+
+Total time:	0.086
+LATENCY DOWNLOAD 1Mb:  5
+
+Lookup time:	0.129
+Connect time:	0.131
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.131
+StartXfer time:	0.137
+
+Total time:	0.187
+LATENCY DOWNLOAD 1Mb:  6
+
+Lookup time:	0.013
+Connect time:	0.014
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.014
+StartXfer time:	0.016
+
+Total time:	0.061
+LATENCY DOWNLOAD 1Mb:  7
+
+Lookup time:	0.013
+Connect time:	0.014
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.015
+StartXfer time:	0.017
+
+Total time:	0.056
+LATENCY DOWNLOAD 1Mb:  8
+
+Lookup time:	0.037
+Connect time:	0.038
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.038
+StartXfer time:	0.042
+
+Total time:	0.071
+LATENCY DOWNLOAD 1Mb:  9
+
+Lookup time:	0.061
+Connect time:	0.062
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.062
+StartXfer time:	0.064
+
+Total time:	0.104
+LATENCY DOWNLOAD 1Mb:  10
+
+Lookup time:	0.029
+Connect time:	0.030
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.032
+
+Total time:	0.072
+End Running in LATENCY domain
+=======================================================
+Running in GEO domain
+GEO NORMAL:  1
+
+Lookup time:	0.125
+Connect time:	0.127
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.127
+StartXfer time:	0.131
+
+Total time:	0.131
+GEO NORMAL:  2
+
+Lookup time:	0.041
+Connect time:	0.042
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.042
+StartXfer time:	0.044
+
+Total time:	0.044
+GEO NORMAL:  3
+
+Lookup time:	0.125
+Connect time:	0.126
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.126
+StartXfer time:	0.128
+
+Total time:	0.128
+GEO NORMAL:  4
+
+Lookup time:	0.016
+Connect time:	0.017
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.017
+StartXfer time:	0.018
+
+Total time:	0.019
+GEO NORMAL:  5
+
+Lookup time:	0.029
+Connect time:	0.030
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.032
+
+Total time:	0.032
+GEO NORMAL:  6
+
+Lookup time:	0.125
+Connect time:	0.126
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.126
+StartXfer time:	0.128
+
+Total time:	0.128
+GEO NORMAL:  7
+
+Lookup time:	0.029
+Connect time:	0.030
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.031
+
+Total time:	0.032
+GEO NORMAL:  8
+
+Lookup time:	0.012
+Connect time:	0.014
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.014
+StartXfer time:	0.016
+
+Total time:	0.016
+GEO NORMAL:  9
+
+Lookup time:	0.253
+Connect time:	0.254
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.254
+StartXfer time:	0.257
+
+Total time:	0.257
+GEO NORMAL:  10
+
+Lookup time:	0.029
+Connect time:	0.030
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.032
+
+Total time:	0.032
+GEO WAIT 100ms:  1
+
+Lookup time:	0.020
+Connect time:	0.021
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.021
+StartXfer time:	0.123
+
+Total time:	0.123
+GEO WAIT 100ms:  2
+
+Lookup time:	0.061
+Connect time:	0.062
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.062
+StartXfer time:	0.166
+
+Total time:	0.166
+GEO WAIT 100ms:  3
+
+Lookup time:	0.013
+Connect time:	0.015
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.015
+StartXfer time:	0.117
+
+Total time:	0.117
+GEO WAIT 100ms:  4
+
+Lookup time:	0.014
+Connect time:	0.015
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.015
+StartXfer time:	0.121
+
+Total time:	0.121
+GEO WAIT 100ms:  5
+
+Lookup time:	0.014
+Connect time:	0.017
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.017
+StartXfer time:	0.124
+
+Total time:	0.124
+GEO WAIT 100ms:  6
+
+Lookup time:	0.013
+Connect time:	0.014
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.014
+StartXfer time:	0.120
+
+Total time:	0.120
+GEO WAIT 100ms:  7
+
+Lookup time:	0.014
+Connect time:	0.015
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.015
+StartXfer time:	0.118
+
+Total time:	0.118
+GEO WAIT 100ms:  8
+
+Lookup time:	0.013
+Connect time:	0.013
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.013
+StartXfer time:	0.119
+
+Total time:	0.119
+GEO WAIT 100ms:  9
+
+Lookup time:	0.014
+Connect time:	0.015
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.015
+StartXfer time:	0.117
+
+Total time:	0.117
+GEO WAIT 100ms:  10
+
+Lookup time:	0.061
+Connect time:	0.062
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.062
+StartXfer time:	0.164
+
+Total time:	0.164
+GEO DOWNLOAD 1Mb:  1
+
+Lookup time:	0.012
+Connect time:	0.014
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.014
+StartXfer time:	0.016
+
+Total time:	0.102
+GEO DOWNLOAD 1Mb:  2
+
+Lookup time:	0.126
+Connect time:	0.127
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.128
+StartXfer time:	0.130
+
+Total time:	0.189
+GEO DOWNLOAD 1Mb:  3
+
+Lookup time:	0.029
+Connect time:	0.032
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.032
+StartXfer time:	0.035
+
+Total time:	0.083
+GEO DOWNLOAD 1Mb:  4
+
+Lookup time:	0.030
+Connect time:	0.031
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.031
+StartXfer time:	0.033
+
+Total time:	0.082
+GEO DOWNLOAD 1Mb:  5
+
+Lookup time:	0.005
+Connect time:	0.008
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.008
+StartXfer time:	0.010
+
+Total time:	0.066
+GEO DOWNLOAD 1Mb:  6
+
+Lookup time:	0.021
+Connect time:	0.023
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.023
+StartXfer time:	0.030
+
+Total time:	0.080
+GEO DOWNLOAD 1Mb:  7
+
+Lookup time:	0.029
+Connect time:	0.030
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.032
+
+Total time:	0.102
+GEO DOWNLOAD 1Mb:  8
+
+Lookup time:	0.029
+Connect time:	0.030
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.032
+
+Total time:	0.082
+GEO DOWNLOAD 1Mb:  9
+
+Lookup time:	0.062
+Connect time:	0.064
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.064
+StartXfer time:	0.066
+
+Total time:	0.110
+GEO DOWNLOAD 1Mb:  10
+
+Lookup time:	0.030
+Connect time:	0.031
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.031
+StartXfer time:	0.037
+
+Total time:	0.086
+End Running in GEO domain
