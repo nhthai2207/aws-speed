@@ -1,0 +1,245 @@
+Running in LATENCY domain
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+LATENCY NORMAL:  1
+
+Lookup time:	0.004
+Connect time:	0.006
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.006
+StartXfer time:	0.008
+
+Total time:	0.008
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+LATENCY NORMAL:  2
+
+Lookup time:	0.061
+Connect time:	0.062
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.062
+StartXfer time:	0.064
+
+Total time:	0.064
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+LATENCY NORMAL:  3
+
+Lookup time:	0.253
+Connect time:	0.254
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.254
+StartXfer time:	0.256
+
+Total time:	0.256
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+LATENCY NORMAL:  4
+
+Lookup time:	0.029
+Connect time:	0.030
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.032
+
+Total time:	0.032
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+LATENCY NORMAL:  5
+
+Lookup time:	0.069
+Connect time:	0.070
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.070
+StartXfer time:	0.072
+
+Total time:	0.072
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+LATENCY NORMAL:  6
+
+Lookup time:	0.029
+Connect time:	0.030
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.031
+
+Total time:	0.031
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+LATENCY NORMAL:  7
+
+Lookup time:	0.004
+Connect time:	0.006
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.006
+StartXfer time:	0.008
+
+Total time:	0.008
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+LATENCY NORMAL:  8
+
+Lookup time:	0.004
+Connect time:	0.005
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.005
+StartXfer time:	0.007
+
+Total time:	0.007
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+LATENCY NORMAL:  9
+
+Lookup time:	0.253
+Connect time:	0.254
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.254
+StartXfer time:	0.256
+
+Total time:	0.256
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+LATENCY NORMAL:  10
+
+Lookup time:	0.018
+Connect time:	0.018
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.018
+StartXfer time:	0.020
+
+Total time:	0.020
+End Running in LATENCY domain
+=======================================================
+Running in GEO domain
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+GEO NORMAL:  1
+
+Lookup time:	0.029
+Connect time:	0.030
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.032
+
+Total time:	0.032
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+GEO NORMAL:  2
+
+Lookup time:	0.004
+Connect time:	0.005
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.005
+StartXfer time:	0.007
+
+Total time:	0.007
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+GEO NORMAL:  3
+
+Lookup time:	0.033
+Connect time:	0.034
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.034
+StartXfer time:	0.036
+
+Total time:	0.036
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+GEO NORMAL:  4
+
+Lookup time:	0.029
+Connect time:	0.029
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.031
+
+Total time:	0.031
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+GEO NORMAL:  5
+
+Lookup time:	0.029
+Connect time:	0.030
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.030
+StartXfer time:	0.031
+
+Total time:	0.031
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+GEO NORMAL:  6
+
+Lookup time:	0.125
+Connect time:	0.126
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.126
+StartXfer time:	0.128
+
+Total time:	0.128
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+GEO NORMAL:  7
+
+Lookup time:	0.004
+Connect time:	0.005
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.005
+StartXfer time:	0.007
+
+Total time:	0.007
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+GEO NORMAL:  8
+
+Lookup time:	0.004
+Connect time:	0.005
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.005
+StartXfer time:	0.007
+
+Total time:	0.007
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+GEO NORMAL:  9
+
+Lookup time:	0.029
+Connect time:	0.029
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.029
+StartXfer time:	0.031
+
+Total time:	0.031
+ * Restarting Name Service Cache Daemon nscd
+   ...done.
+GEO NORMAL:  10
+
+Lookup time:	0.011
+Connect time:	0.013
+AppCon time:	0.000
+Redirect time:	0.000
+PreXfer time:	0.013
+StartXfer time:	0.014
+
+Total time:	0.014
+End Running in GEO domain
