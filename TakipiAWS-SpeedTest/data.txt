@@ -1,0 +1,56 @@
+$date$=Nov 5th - Nov 12
+
+$img1$=nov5_1.png
+$img1width$=180
+$img1height$=69
+$title1$=Product Manager
+$moredetail1$
+$company1des$=Warranteer - A cross-platform system (Mobile & Web) that connects consumers to vendors, and manages warranties in a paperless way. Warranteer is a young, well-funded, fast growing startup, located in the heart of Tel Aviv. If you're looking to lead a unique and diversified platform (iOS, Android & Web), and join a company in it's early growth phase - We have a seat for you. 
+$number1employee$=5
+$location1$=Tel Aviv
+$jobdes1$=We’re looking for a Product Manager. Must have: Proven track record in product management, deep understanding of project management principles and best practices, a strong passion for design and UX, experience in balancing business, design & R&D priorities, master Jedi in analytics and expertise in Android/iOS design patterns. 
+$contact1$=jobs@warranteer.com
+
+$img2$=nov5_2.png
+$img2width$=153
+$img2height$=35
+$title2$=Growth Hacker
+$moredetail2$=
+$company2des$=CloudShare is a leading provider of cloud-based virtual labs that enable software development professionals to explore, develop, test and share freely throughout the application lifecycle (and beyond). Over 200,000 customers worldwide use CloudShare to kick-start new development projects, explore new technologies, develop complex applications, collaborate across teams and share the results with customers and partners
+$number2employee$=12
+$location2$=Tel Aviv
+$jobdes2$=We're looking for a growth hacker with 2-5 years of experience, very hands on, high energy that can deal with web site editing, A/B testing, running programs, emails, social and collateral. 
+$contact2$=zvi@cloudshare.com
+
+$img3$=nov5_3.png
+$img3width$=180
+$img3height$=53
+$title3$=Lead Developer 
+$moredetail3$
+$company3des$=Codota mines useful knowledge from the vast amount of code on sites like GitHub, StackOverflow and companies private repos. Codota's unique algorithms combine program analysis and machine learning to help developers on a daily basis.
+$number3employee$=4
+$location3$=Tel Aviv
+$jobdes3$=We're looking for an experienced and versatile lead developer to join our core team. The right candidate will have great influence on the product and will work with state of the art tools and technologies. We seek a smart, resourceful and energetic leader to fit this position.
+$contact3$=dror.weiss@gmail.com
+
+$img4$=nov5_4.png
+$img4width$=180
+$img4height$=42
+$title4$=Business Development
+$moredetail4$=
+$company4des$=carambo.la - Carambola is an interactive video enrichment platform. With Carambola, users choose to get info, eCommerce offers, polls and trivia questions - all related to the specific video just played. 
+$number4employee$=15
+$location4$=Raanana
+$jobdes4$=We are looking for highly motivated Business Development Manager. This person will be responsible for seeking and building new partnerships - including search, initial contact, negotiate and close deals with publishers and networks, leading the cycle from first reach-out to integration. Requirements are minimum 1 year experience as a media buyer/ business development within a startup or technology company, excellent oral and written communication skills in English, strong negotiation and presentation skills, and analytics skills.
+$contact4$=livia@carambo.la
+
+$img5$=nov5_5.png
+$img5width$=180
+$img5height$=74
+$title5$=Algorithm guru
+$moredetail5$=
+$company5des$=Coralogix is a SaaS AI platform that connects to any production system, learns the patterns and flows of it according to its logs, and then detects anomalies and software issues.
+$number5employee$=5
+$location5$=Tel Avil
+$jobdes5$=Algorithm guru - A fast learning proffesional with strong analytical skills, B.Sc in Computer Science / Computer Engineering / related degree, experience in data mining, NLP, text analysis, experience in software developmen, experience in Python and Java, and experience in working with distributed systems, MapReduce etc.
+$contact5$=ariel@coralogix.com
