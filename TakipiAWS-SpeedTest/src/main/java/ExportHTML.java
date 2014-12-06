@@ -42,8 +42,7 @@ public class ExportHTML {
 			Set<Object> keySet2 = prop.keySet();
 			for (Object obj : keySet2) {
 				keySet.add((String) obj);
-			}
-			System.out.println(prop.getProperty("$img1$"));
+			}			
 
 		} catch (IOException ex) {
 			ex.printStackTrace();
@@ -68,7 +67,8 @@ public class ExportHTML {
 		FileWriter fw = new FileWriter(tempFile);
 
 		while (br.ready()) {
-			String ret = processForString(br.readLine(),srcFile.contains("news"));
+			String test = br.readLine();
+			String ret = processForString(test,srcFile.contains("news"));
 			fw.write(ret + "\n");
 		}
 
@@ -79,10 +79,11 @@ public class ExportHTML {
 	}
 
 	public static String processForString(String data, boolean isNew) {
+		data = data.trim();
 		String ret = data;
 		for (String s : keySet) {
 			if (data.contains(s)) {
-				if (s.contains("$moredetail$")) {
+				if (s.contains("$moredetail")) {
 					String property = prop.getProperty(s);
 					if (property != null && property.length() != 0) {
 						String tmp = moreDetail.replace("$url$", property);
@@ -90,7 +91,7 @@ public class ExportHTML {
 					} else {
 						ret = ret.replace(s, "");
 					}
-				} else if (s.contains("$contact$")) {
+				} else if (s.contains("$contact")) {
 					String base = contact;
 					if(isNew){
 						base = contact_news;
