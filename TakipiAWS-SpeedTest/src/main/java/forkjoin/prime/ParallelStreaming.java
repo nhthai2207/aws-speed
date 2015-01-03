@@ -4,16 +4,18 @@ import java.math.BigInteger;
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import forkjoin.Utils;
 
 public class ParallelStreaming {
 	static List<BigInteger> list = new LinkedList<>();
-	private static BigInteger prime =Utils.primeNumber;// new BigInteger("3000");
+	private static BigInteger prime = Utils.primeNumber;// new BigInteger("3000");
 
 	public static boolean isPrime() {		
-		long count = list.parallelStream().filter(i -> prime.mod(i).equals(0)).count();		
-		return count == 0;
+		Set<BigInteger> collect = list.parallelStream().filter(i -> prime.mod(i).equals(BigInteger.ZERO)).collect(Collectors.toSet());		
+		return collect.size() == 0;
 	}
 
 	private static void createList(BigInteger start, BigInteger end) {

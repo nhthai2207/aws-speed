@@ -12,8 +12,8 @@ public class Utils {
 	public static BigInteger numberOfThread = new BigInteger("10");
 	static {
 		//primeNumber = new BigInteger("10969639"); // 24 bit 
-		primeNumber = new BigInteger("253587964573397"); // 48 bit //1.4ms
-		//primeNumber = new BigInteger("253587964573341"); // Not prime
+		//primeNumber = new BigInteger("253587964573397"); // 48 bit //1.4ms
+		primeNumber = new BigInteger("253587964573341"); // Not prime
 		//primeNumber = new BigInteger("1079364038048305033"); // 60 bit // 90096ms
 		
 		//primeNumber = BigInteger.probablePrime(24, new Random());
