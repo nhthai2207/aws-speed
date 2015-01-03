@@ -1,6 +1,7 @@
 package forkjoin.prime;
 
 import java.math.BigInteger;
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -14,10 +15,8 @@ public class ParallelStreaming {
 	private static BigInteger prime = Utils.primeNumber;
 
 	public static boolean isPrime() {
-
-		Set<BigInteger> collect = list.parallelStream().filter(j -> prime.mod(j).equals(0)).collect(Collectors.toSet());
-		System.out.println(collect.size());
-		return false;
+		Set<BigInteger> collect = list.parallelStream().filter(j -> prime.mod(j).equals(0)).collect(Collectors.toSet());		
+		return collect.size() == 0;
 	}
 
 	private static void createList(BigInteger start, BigInteger end) {
@@ -27,12 +26,10 @@ public class ParallelStreaming {
 	}
 
 	public static void main(String args[]) {
-
-		BigInteger sqrt = Utils.sqrt(prime);
-		createList(Utils.two, sqrt);
-		long startTime = System.currentTimeMillis();
-		isPrime();
-		long timeTaken = System.currentTimeMillis() - startTime;
-		System.out.println("Time taken: " + timeTaken);
+		createList(Utils.two, Utils.sqrt);
+		long t1 = Calendar.getInstance().getTimeInMillis();
+		boolean isPrime = isPrime();
+		long t2 = Calendar.getInstance().getTimeInMillis();
+		System.out.println(String.format("Time = %s ms ; result = %s", (t2 - t1), isPrime));
 	}
 }

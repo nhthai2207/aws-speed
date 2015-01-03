@@ -16,16 +16,14 @@ public class SerializeThread {
 	}
 
 	public static boolean isprime(BigInteger n) {
-		if (n.compareTo(BigInteger.ONE) == 0 || n.compareTo(Utils.two) == 0) {
-			return true;
-		}
+		boolean isPrime = true;
 		BigInteger root = Utils.sqrt(n);
-		for (BigInteger i = Utils.three; i.compareTo(root) <= 0; i = i.add(BigInteger.ONE)) {
+		for (BigInteger i = Utils.two; i.compareTo(root) <= 0; i = i.add(BigInteger.ONE)) {
 			if (n.mod(i).equals(BigInteger.ZERO)) {
-				return false;
+				isPrime = false;
 			}
 		}
-		return true;
+		return isPrime;
 	}
 
 }
