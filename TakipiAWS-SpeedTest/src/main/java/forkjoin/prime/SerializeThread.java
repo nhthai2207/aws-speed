@@ -9,8 +9,7 @@ public class SerializeThread {
 	
 	public static void main(String[] args) {
 		long t1 = Calendar.getInstance().getTimeInMillis();
-		boolean isprime = isprime(Utils.primeNumber);
-		System.out.println();
+		boolean isprime = isprime(Utils.primeNumber);		
 		long t2 = Calendar.getInstance().getTimeInMillis();
 		System.out.println(String.format("Time = %s ms ; result = %s", (t2 - t1), isprime));
 	}
