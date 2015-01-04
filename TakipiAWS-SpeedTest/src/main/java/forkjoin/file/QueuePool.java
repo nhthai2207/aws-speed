@@ -26,8 +26,7 @@ public class QueuePool {
 	}
 
 	public Map<String, List<WordIndex>> processPart(long from, long to) throws Exception {
-		Map<String, List<WordIndex>> result = new HashMap<String, List<WordIndex>>();
-		String str = "";
+		Map<String, List<WordIndex>> result = new HashMap<String, List<WordIndex>>();		
 		InputStream is = new FileInputStream(Utils.fileLocation);
 		is.skip(from * 1024);
 		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
@@ -85,6 +84,5 @@ public class QueuePool {
 		Map<String, List<WordIndex>> processAll = s.processAll(8, 1024);
 		long t2 = Calendar.getInstance().getTimeInMillis();
 		System.out.println(String.format("Time = %s ms ; number of words = %s, number of 'it' = %s", (t2 - t1), processAll.size(), processAll.get("it").size()));
-
 	}
 }

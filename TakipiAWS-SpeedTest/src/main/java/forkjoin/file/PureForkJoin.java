@@ -31,7 +31,6 @@ public class PureForkJoin extends RecursiveTask {
 		is.skip(from * 1024);
 		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 		String s = "";
-
 		long line = from;
 		while ((s = reader.readLine()) != null && line <= to) {
 			String[] words = s.trim().split("\\s+");
