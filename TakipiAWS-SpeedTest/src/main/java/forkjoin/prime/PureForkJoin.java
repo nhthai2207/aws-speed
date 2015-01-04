@@ -40,8 +40,7 @@ public class PureForkJoin extends RecursiveTask<Boolean> {
 		BigInteger middle = to.add(from).divide(Utils.two);
 		PureForkJoin leftJoin = new PureForkJoin(primeNumber, from, middle);
 		PureForkJoin rightJoin = new PureForkJoin(primeNumber, middle.add(BigInteger.ONE), to);
-		return leftJoin.compute() && rightJoin.compute();
-		
+		return leftJoin.compute() && rightJoin.compute();		
 	}
 
 	public static void main(String[] args) {

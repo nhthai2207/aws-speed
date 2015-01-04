@@ -1,5 +1,10 @@
 package forkjoin;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.LineNumberReader;
 import java.math.BigInteger;
 import java.util.Random;
 
@@ -10,6 +15,7 @@ public class Utils {
 	public static BigInteger primeNumber ;
 	public static BigInteger sqrt;
 	public static BigInteger numberOfThread = new BigInteger("10");
+	public static String fileLocation = "/data/tmp/test.txt";
 	static {
 		//primeNumber = new BigInteger("10969639"); // 24 bit 
 		primeNumber = new BigInteger("253587964573397"); // 48 bit //1.4ms
@@ -31,5 +37,25 @@ public class Utils {
 				a = mid.add(BigInteger.ONE);
 		}
 		return a.subtract(BigInteger.ONE);
+	}
+	
+	public static boolean isEmptyString(String s){
+		return s == null || "".equals(s.trim());
+	}	
+	
+	public static long countLineNumber(String fileLocation) {
+		long lines = 0;
+		try {
+			File file = new File(fileLocation);
+			LineNumberReader lineNumberReader = new LineNumberReader(new FileReader(file));
+			lineNumberReader.skip(Long.MAX_VALUE);
+			lines = lineNumberReader.getLineNumber();
+			lineNumberReader.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("FileNotFoundException Occured" + e.getMessage());
+		} catch (IOException e) {
+			System.out.println("IOException Occured" + e.getMessage());
+		}
+		return lines;
 	}
 }
