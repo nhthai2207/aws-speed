@@ -15,7 +15,7 @@ public class Utils {
 	public static BigInteger primeNumber ;
 	public static BigInteger sqrt;
 	public static BigInteger numberOfThread = new BigInteger("10");
-	public static String fileLocation = "/data/tmp/test.txt";
+	public static String fileLocation = "test.txt";
 	static {
 		//primeNumber = new BigInteger("10969639"); // 24 bit 
 		primeNumber = new BigInteger("253587964573397"); // 48 bit //1.4ms

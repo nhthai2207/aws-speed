@@ -17,7 +17,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 import forkjoin.Utils;
-
+// http://stackoverflow.com/questions/11867348/concurrent-reading-of-a-file-java-preffered/11868557#11868557
 public class QueuePool {
 	private File file;
 
