@@ -1,14 +1,9 @@
 package forkjoin.file;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
@@ -25,33 +20,10 @@ public class QueuePool {
 		this.file = file;
 	}
 
-	public Map<String, List<WordIndex>> processPart(long from, long to) throws Exception {
-		Map<String, List<WordIndex>> result = new HashMap<String, List<WordIndex>>();		
-		InputStream is = new FileInputStream(Utils.fileLocation);
-		is.skip(from * 1024);
-		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-		String s = "";
-		long line = from;
-		while ((s = reader.readLine()) != null && line <= to) {
-			String[] words = s.trim().split("\\s+");
-			for (int i = 0; i < words.length; i++) {
-				if (!Utils.isEmptyString(words[i])) {
-					if (result.get(words[i]) == null) {
-						result.put(words[i], new LinkedList<WordIndex>());
-					}
-					result.get(words[i]).add(new WordIndex(line, i));
-				}
-			}
-			line++;
-		}
-		is.close();
-		return result;
-	}
-
 	public Callable<Map<String, List<WordIndex>>> processPartTask(final long start, final long end) {
 		return new Callable<Map<String, List<WordIndex>>>() {
 			public Map<String, List<WordIndex>> call() throws Exception {
-				return processPart(start, end);
+				return Utils.processPart(start, end);
 			}
 		};
 	}

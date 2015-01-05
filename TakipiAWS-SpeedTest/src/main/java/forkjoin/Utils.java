@@ -1,12 +1,22 @@
 package forkjoin;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.Random;
+
+import forkjoin.file.WordIndex;
 
 public class Utils {
 	public static BigInteger two = new BigInteger("2");
@@ -57,5 +67,28 @@ public class Utils {
 			System.out.println("IOException Occured" + e.getMessage());
 		}
 		return lines;
+	}
+	
+	public static Map<String, List<WordIndex>> processPart(long from, long to) throws Exception {
+		Map<String, List<WordIndex>> result = new HashMap<String, List<WordIndex>>();		
+		InputStream is = new FileInputStream(Utils.fileLocation);
+		is.skip(from * 1024);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+		String s = "";
+		long line = from;
+		while ((s = reader.readLine()) != null && line <= to) {
+			String[] words = s.trim().split("\\s+");
+			for (int i = 0; i < words.length; i++) {
+				if (!Utils.isEmptyString(words[i])) {
+					if (result.get(words[i]) == null) {
+						result.put(words[i], new LinkedList<WordIndex>());
+					}
+					result.get(words[i]).add(new WordIndex(line, i));
+				}
+			}
+			line++;
+		}
+		is.close();
+		return result;
 	}
 }

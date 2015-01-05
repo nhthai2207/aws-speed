@@ -26,32 +26,13 @@ public class PureForkJoin extends RecursiveTask {
 		this.to = to;
 	}
 
-	private void computeDirectly() throws Exception {		
-		InputStream is = new FileInputStream(Utils.fileLocation);
-		is.skip(from * 1024);
-		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-		String s = "";
-		long line = from;
-		while ((s = reader.readLine()) != null && line <= to) {
-			String[] words = s.trim().split("\\s+");
-			for (int i = 0; i < words.length; i++) {
-				if (!Utils.isEmptyString(words[i])) {
-					if (result.get(words[i]) == null) {
-						result.put(words[i], new LinkedList<WordIndex>());
-					}
-					result.get(words[i]).add(new WordIndex(line, i));
-				}
-			}
-			line++;
-		}
-		is.close();
-	}
+	
 
 	@Override
 	protected Object compute() {
 		try {
 			if (to - from <= numberLinePerThread) {
-				computeDirectly();
+				this.result = Utils.processPart(from, to);
 				return null;
 			}
 			long middle = (to + from) / 2;
