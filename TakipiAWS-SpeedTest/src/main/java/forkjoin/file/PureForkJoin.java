@@ -1,12 +1,7 @@
 package forkjoin.file;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ForkJoinPool;
@@ -64,5 +59,11 @@ public class PureForkJoin extends RecursiveTask {
 		pool.invoke(fb);
 		long t2 = Calendar.getInstance().getTimeInMillis();
 		System.out.println(String.format("Time = %s ms ; number of words = %s, number of 'it' = %s", (t2 - t1), fb.result.size(), fb.result.get("it").size()));
+		List<WordIndex> list = fb.result.get("it");
+		System.out.println("Data for words 'it'" );
+		for (WordIndex wordIndex : list) {
+			System.out.println(wordIndex.toString());
+		}
+
 	}
 }

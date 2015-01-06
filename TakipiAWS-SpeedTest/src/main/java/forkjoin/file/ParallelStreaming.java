@@ -45,5 +45,10 @@ public class ParallelStreaming {
 		Map<String, List<WordIndex>> process = process();
 		long t2 = Calendar.getInstance().getTimeInMillis();
 		System.out.println(String.format("Time = %s ms ; number of words = %s, number of 'it' = %s", (t2 - t1), process.size(), process.get("it").size()));
+		List<WordIndex> list = process.get("it");
+		System.out.println("Data for words 'it'" );	
+		for (WordIndex wordIndex : list) {
+			System.out.println(wordIndex.toString());
+		}
 	}
 }

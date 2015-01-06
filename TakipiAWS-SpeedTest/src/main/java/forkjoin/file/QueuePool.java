@@ -13,6 +13,8 @@ import java.util.concurrent.Future;
 
 import forkjoin.Utils;
 // http://stackoverflow.com/questions/11867348/concurrent-reading-of-a-file-java-preffered/11868557#11868557
+
+
 public class QueuePool {
 	private File file;
 
@@ -56,5 +58,11 @@ public class QueuePool {
 		Map<String, List<WordIndex>> processAll = s.processAll(8, 1024);
 		long t2 = Calendar.getInstance().getTimeInMillis();
 		System.out.println(String.format("Time = %s ms ; number of words = %s, number of 'it' = %s", (t2 - t1), processAll.size(), processAll.get("it").size()));
+		List<WordIndex> list = processAll.get("it");
+		System.out.println("Data for words 'it'" );
+		for (WordIndex wordIndex : list) {
+			System.out.println(wordIndex.toString());
+		}
+
 	}
 }

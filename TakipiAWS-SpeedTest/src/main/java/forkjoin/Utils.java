@@ -34,7 +34,7 @@ public class Utils {
 		
 		//primeNumber = BigInteger.probablePrime(24, new Random());
 		sqrt = Utils.sqrt(primeNumber);
-		System.out.println("Number test : " + primeNumber);
+		//System.out.println("Number test : " + primeNumber);
 	}
 	public static BigInteger sqrt(BigInteger n) {
 		BigInteger a = BigInteger.ONE;
