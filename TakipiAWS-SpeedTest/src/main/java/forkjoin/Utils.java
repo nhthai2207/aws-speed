@@ -26,6 +26,7 @@ public class Utils {
 	public static BigInteger sqrt;
 	public static BigInteger numberOfThread = new BigInteger("10");
 	public static String fileLocation = "test.txt";
+	public static long numberLinePerThread = 10000;
 	static {
 		//primeNumber = new BigInteger("10969639"); // 24 bit 
 		primeNumber = new BigInteger("253587964573397"); // 48 bit //1.4ms
@@ -70,6 +71,7 @@ public class Utils {
 	}
 	
 	public static Map<String, List<WordIndex>> processPart(long from, long to) throws Exception {
+		System.out.println(String.format("Process from %s to %s ", from, to));
 		Map<String, List<WordIndex>> result = new HashMap<String, List<WordIndex>>();		
 		InputStream is = new FileInputStream(Utils.fileLocation);
 		is.skip(from * 1024);
@@ -79,12 +81,12 @@ public class Utils {
 		while ((s = reader.readLine()) != null && line <= to) {
 			String[] words = s.trim().split("\\s+");
 			for (int i = 0; i < words.length; i++) {
-				if (!Utils.isEmptyString(words[i])) {
+				/*if (!Utils.isEmptyString(words[i])) {
 					if (result.get(words[i]) == null) {
 						result.put(words[i], new LinkedList<WordIndex>());
 					}
 					result.get(words[i]).add(new WordIndex(line, i));
-				}
+				}*/
 			}
 			line++;
 		}

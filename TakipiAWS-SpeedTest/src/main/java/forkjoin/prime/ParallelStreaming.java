@@ -14,6 +14,7 @@ public class ParallelStreaming {
 	private static BigInteger prime = Utils.primeNumber;// new BigInteger("3000");
 
 	public static boolean isPrime() {
+		
 		//http://stackoverflow.com/questions/23442183/using-a-semaphore-inside-a-nested-java-8-parallel-stream-action-may-deadlock-is
 		System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism",String.valueOf(Utils.numberOfThread.intValue()));
 		Set<BigInteger> collect = list.parallelStream().filter(i -> prime.mod(i).equals(BigInteger.ZERO)).collect(Collectors.toSet());		

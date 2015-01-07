@@ -18,12 +18,12 @@ public class SerializeThread {
 			long t1 = Calendar.getInstance().getTimeInMillis();
 			process();
 			long t2 = Calendar.getInstance().getTimeInMillis();
-			System.out.println(String.format("Time = %s ms ; number of words = %s, number of 'it' = %s", (t2 - t1), result.size(), result.get("it").size()));
+			System.out.println(String.format("Time = %s ms ; number of words = %s", (t2 - t1), result.size()));
 			List<WordIndex> list = result.get("it");
-			System.out.println("Data for words 'it'" );
+			/*System.out.println("Data for words 'it'" );
 			for (WordIndex wordIndex : list) {
 				System.out.println(wordIndex.toString());
-			}
+			}*/
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -37,16 +37,21 @@ public class SerializeThread {
 			inputStream = new FileInputStream(Utils.fileLocation);
 			sc = new Scanner(inputStream, "UTF-8");
 			int line = 0;
+			String s = "";
+			String[] words = null;
 			while (sc.hasNextLine()) {
-				String s = sc.nextLine();
-				String[] words = s.trim().split("\\s+");
+				s = sc.nextLine();
+				words = s.trim().split("\\s+");
 				for (int i = 0; i < words.length; i++) {
 					if (!Utils.isEmptyString(words[i])) {
-						if (result.get(words[i]) == null) {
-							result.put(words[i], new LinkedList<WordIndex>());
-						}
-						result.get(words[i]).add(new WordIndex(line, i));
+						//if (result.get(words[i]) == null) {
+						//	result.put(words[i], new LinkedList<WordIndex>());
+						//}
+						//result.get(words[i]).add(new WordIndex(line, i));
 					}
+				}
+				if(line%10000 == 0){
+					System.out.println(line);
 				}
 				line++;
 			}
