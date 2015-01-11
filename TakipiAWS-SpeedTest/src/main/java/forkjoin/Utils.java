@@ -33,7 +33,7 @@ public class Utils {
 		//primeNumber = new BigInteger("253587964573341"); // Not prime
 		//primeNumber = new BigInteger("1079364038048305033"); // 60 bit // 90096ms
 		
-		//primeNumber = BigInteger.probablePrime(24, new Random());
+		
 		sqrt = Utils.sqrt(primeNumber);
 		//System.out.println("Number test : " + primeNumber);
 	}
@@ -57,6 +57,8 @@ public class Utils {
 	public static long countLineNumber(String fileLocation) {
 		long lines = 0;
 		try {
+			if(true)
+				return 1838200;
 			File file = new File(fileLocation);
 			LineNumberReader lineNumberReader = new LineNumberReader(new FileReader(file));
 			lineNumberReader.skip(Long.MAX_VALUE);
@@ -71,7 +73,8 @@ public class Utils {
 	}
 	
 	public static Map<String, List<WordIndex>> processPart(long from, long to) throws Exception {
-		System.out.println(String.format("Process from %s to %s ", from, to));
+		//System.out.print(String.format("Process from %s to %s , ", from, to));
+		System.out.print(String.format("%s,", from));
 		Map<String, List<WordIndex>> result = new HashMap<String, List<WordIndex>>();		
 		InputStream is = new FileInputStream(Utils.fileLocation);
 		is.skip(from * 1024);

@@ -19,8 +19,6 @@ public class PureForkJoin extends RecursiveTask {
 		this.to = to;
 	}
 
-	
-
 	@Override
 	protected Object compute() {
 		try {
@@ -31,17 +29,14 @@ public class PureForkJoin extends RecursiveTask {
 			long middle = (to + from) / 2;
 			PureForkJoin leftJoin = new PureForkJoin(from, middle);
 			PureForkJoin rightJoin = new PureForkJoin(middle + 1L, to);
-			invokeAll(leftJoin, rightJoin);			
-			/*for (String key : leftJoin.result.keySet()) {
-				this.result.put(key, leftJoin.result.get(key));
-			}
-			for (String key : rightJoin.result.keySet()) {
-				if (this.result.get(key) == null) {
-					this.result.put(key, rightJoin.result.get(key));
-				}else{
-					this.result.get(key).addAll(rightJoin.result.get(key));
-				}
-			}*/
+			invokeAll(leftJoin, rightJoin);
+			/*
+			 * for (String key : leftJoin.result.keySet()) {
+			 * this.result.put(key, leftJoin.result.get(key)); } for (String key
+			 * : rightJoin.result.keySet()) { if (this.result.get(key) == null)
+			 * { this.result.put(key, rightJoin.result.get(key)); }else{
+			 * this.result.get(key).addAll(rightJoin.result.get(key)); } }
+			 */
 
 		} catch (Exception e) {
 
@@ -51,11 +46,13 @@ public class PureForkJoin extends RecursiveTask {
 
 	public static void main(String[] args) {
 		long countLineNumber = Utils.countLineNumber(Utils.fileLocation);
-		PureForkJoin fb = new PureForkJoin(0L, countLineNumber-1);
-		ForkJoinPool pool = new ForkJoinPool();
-		long t1 = Calendar.getInstance().getTimeInMillis();
-		pool.invoke(fb);
-		long t2 = Calendar.getInstance().getTimeInMillis();
-		System.out.println(String.format("Time = %s ms ", (t2 - t1)));
+		for (int i = 0; i < 5; i++) {
+			PureForkJoin fb = new PureForkJoin(0L, countLineNumber - 1);
+			ForkJoinPool pool = new ForkJoinPool();
+			long t1 = Calendar.getInstance().getTimeInMillis();
+			pool.invoke(fb);
+			long t2 = Calendar.getInstance().getTimeInMillis();
+			System.out.println(String.format("Time = %s ms ", (t2 - t1)));
+		}
 	}
 }
