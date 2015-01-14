@@ -13,12 +13,13 @@ public class PureForkJoin extends RecursiveTask<Boolean> {
 	private BigInteger from;
 	private BigInteger to;
 	
-	static BigInteger lengthForThread = Utils.sqrt.divide(Utils.numberOfThread);
+	
 
 	public PureForkJoin(BigInteger src, BigInteger start, BigInteger length) {
 		this.primeNumber = src;
 		this.from = start;
 		this.to = length;
+		
 	}
 
 	private boolean computeDirectly() {
@@ -34,7 +35,7 @@ public class PureForkJoin extends RecursiveTask<Boolean> {
 	@Override
 	protected Boolean compute() {
 		BigInteger tmp = to.subtract(from);
-		if (tmp.compareTo(lengthForThread) <= 0) {
+		if (tmp.compareTo(TestPrime.lengthForThread) <= 0) {
 			return computeDirectly();			
 		}
 		BigInteger middle = to.add(from).divide(Utils.two);
@@ -44,12 +45,7 @@ public class PureForkJoin extends RecursiveTask<Boolean> {
 	}
 
 	public static void main(String[] args) {
-		PureForkJoin fb = new PureForkJoin(Utils.primeNumber, Utils.two, Utils.sqrt);
-		ForkJoinPool pool = new ForkJoinPool();
-		long t1 = Calendar.getInstance().getTimeInMillis();
-		Boolean isPrime = pool.invoke(fb);
-		long t2 = Calendar.getInstance().getTimeInMillis();
-		System.out.println(String.format("Time = %s ms ; result = %s", (t2 - t1), isPrime));
+		
 
 	}
 }

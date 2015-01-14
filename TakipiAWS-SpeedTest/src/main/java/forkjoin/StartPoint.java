@@ -1,76 +1,27 @@
 package forkjoin;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Calendar;
-import java.util.concurrent.ForkJoinPool;
-
-import forkjoin.file.ParallelStreaming;
-import forkjoin.file.PureForkJoin;
+import forkjoin.file.TestFile;
+import forkjoin.prime.TestPrime;
 
 public class StartPoint {
-	public static void main(String[] args) throws InterruptedException {
-		// int request = Integer.parseInt(args[0]);
-		int request = 0;
-		switch (request) {
-		case 0:
-			createTestFile();
-			break;
-		case 1:
-			for (int i = 0; i < 10; i++) {
-				testForkJoin();
-				Thread.sleep(2000);
-			}
-			break;
-		case 2:
-			for (int i = 0; i < 10; i++) {
-				testParalleStreaming();
-				Thread.sleep(2000);
-			}
-			break;
+	public static void main(String[] args) throws Exception {
+		
+		int request = Integer.parseInt(args[0]);
+		if (request == 0) {
+			TestFile.createTestFile();
+			return;
 		}
-	}
-
-	private static void testParalleStreaming() {
-		long countLineNumber = Utils.countLineNumber(Utils.fileLocation);
-		ParallelStreaming mc = new ParallelStreaming(countLineNumber);		
-		long t1 = Calendar.getInstance().getTimeInMillis();
-		mc.process();
-		long t2 = Calendar.getInstance().getTimeInMillis();
-		System.out.println(String.format("Time = %s ms ", (t2 - t1)));
-	}
-
-	private static void testForkJoin() {
-		long countLineNumber = Utils.countLineNumber(Utils.fileLocation);
-		PureForkJoin fb = new PureForkJoin(0L, countLineNumber - 1);
-		ForkJoinPool pool = new ForkJoinPool();
-		long t1 = Calendar.getInstance().getTimeInMillis();
-		pool.invoke(fb);
-		long t2 = Calendar.getInstance().getTimeInMillis();
-		System.out.println(String.format("Time = %s ms ", (t2 - t1)));
-	}
-
-	public static void createTestFile() {
-		try {
-			String data = "The Project Gutenberg EBook of The Outline of Science. This eBook is for the use of anyone anywhere at no cost and with almost no restrictions whatsoever.  You may copy it, give it away or re-use it under the terms of the Project Gutenberg License included with this eBook or online at www.gutenberg.org. Was it not the great philosopher and mathematician Leibnitz who said that the more knowledge advances the more it becomes possible to condense it into little books? Now this \"Outline of Science\" is certainly not a little book, and yet it illustrates part of the meaning of Leibnitz's wise saying. For here within reasonable compass there is a library of little books--an outline of many sciences. What then is the aim of this book? It is to give the intelligent student-citizen, otherwise called \"the man in the street,\" a bunch of intellectual keys by which to open doors which have been hitherto shut to him, partly because he got no glimpse of the treasures behind the doors, and partly because the portals were win\n";
-			File file = new File("/tmp/test.txt");
-			if (!file.exists()) {
-				file.createNewFile();
-			}
-
-			int lineNum = 1838200;
-			FileWriter fileWritter = new FileWriter("/tmp/test.txt", true);
-			BufferedWriter bw = new BufferedWriter(fileWritter);
-			for (int i = 0; i < lineNum; i++) {
-				bw.write(data);
-			}
-			bw.close();
-			System.out.println("Done");
-
-		} catch (IOException e) {
-			e.printStackTrace();
+		int runCase = Integer.parseInt(args[1]);
+		if (request == 1) {
+			long lineNum = Long.parseLong(args[2]);
+			TestFile.testFile(runCase, lineNum);
+			return;
 		}
-	}
+
+		if (request == 2) {
+			TestPrime.testPrime(runCase, args[2]);
+			return;
+		}
+	}	
+	
 }

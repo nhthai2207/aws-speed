@@ -22,21 +22,12 @@ public class Utils {
 	public static BigInteger two = new BigInteger("2");
 	public static BigInteger three = new BigInteger("3");
 
-	public static BigInteger primeNumber ;
-	public static BigInteger sqrt;
+	
 	public static BigInteger numberOfThread = new BigInteger("10");
-	public static String fileLocation = "test.txt";
+	public static String fileLocation = "/tmp/test.txt";
 	public static long numberLinePerThread = 10000;
-	static {
-		//primeNumber = new BigInteger("10969639"); // 24 bit 
-		primeNumber = new BigInteger("253587964573397"); // 48 bit //1.4ms
-		//primeNumber = new BigInteger("253587964573341"); // Not prime
-		//primeNumber = new BigInteger("1079364038048305033"); // 60 bit // 90096ms
-		
-		
-		sqrt = Utils.sqrt(primeNumber);
-		//System.out.println("Number test : " + primeNumber);
-	}
+	public static long lineNum = 1838200;
+	
 	public static BigInteger sqrt(BigInteger n) {
 		BigInteger a = BigInteger.ONE;
 		BigInteger b = new BigInteger(n.shiftRight(5).add(new BigInteger("8")).toString());
@@ -58,7 +49,7 @@ public class Utils {
 		long lines = 0;
 		try {
 			if(true)
-				return 1838200;
+				return lineNum;			
 			File file = new File(fileLocation);
 			LineNumberReader lineNumberReader = new LineNumberReader(new FileReader(file));
 			lineNumberReader.skip(Long.MAX_VALUE);
@@ -74,7 +65,7 @@ public class Utils {
 	
 	public static Map<String, List<WordIndex>> processPart(long from, long to) throws Exception {
 		//System.out.print(String.format("Process from %s to %s , ", from, to));
-		System.out.print(String.format("%s,", from));
+		//System.out.print(String.format("%s,", from));
 		Map<String, List<WordIndex>> result = new HashMap<String, List<WordIndex>>();		
 		InputStream is = new FileInputStream(Utils.fileLocation);
 		is.skip(from * 1024);
@@ -95,5 +86,11 @@ public class Utils {
 		}
 		is.close();
 		return result;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(Long.MAX_VALUE);
+		BigInteger probablePrime = BigInteger.probablePrime(57, new Random());
+		System.out.println(probablePrime);
 	}
 }

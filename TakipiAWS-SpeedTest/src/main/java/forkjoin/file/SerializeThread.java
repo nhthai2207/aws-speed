@@ -15,22 +15,14 @@ public class SerializeThread {
 
 	public static void main(String[] args) {
 		try {
-			long t1 = Calendar.getInstance().getTimeInMillis();
-			process();
-			long t2 = Calendar.getInstance().getTimeInMillis();
-			System.out.println(String.format("Time = %s ms ; number of words = %s", (t2 - t1), result.size()));
-			List<WordIndex> list = result.get("it");
-			/*System.out.println("Data for words 'it'" );
-			for (WordIndex wordIndex : list) {
-				System.out.println(wordIndex.toString());
-			}*/
-
+			
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	public static void process() throws Exception {
+	public void process() throws Exception {
 		FileInputStream inputStream = null;
 		Scanner sc = null;
 		try {
@@ -49,10 +41,7 @@ public class SerializeThread {
 						//}
 						//result.get(words[i]).add(new WordIndex(line, i));
 					}
-				}
-				if(line%10000 == 0){
-					System.out.println(line);
-				}
+				}			
 				line++;
 			}
 			if (sc.ioException() != null) {
