@@ -13,8 +13,8 @@ public class SerializeThread {
 
 	public boolean isprime(BigInteger n) {
 		boolean isPrime = true;
-		BigInteger root = Utils.sqrt(n);
-		for (BigInteger i = Utils.two; i.compareTo(root) <= 0; i = i.add(BigInteger.ONE)) {
+	
+		for (BigInteger i = Utils.two; i.compareTo(TestPrime.sqrt) <= 0; i = i.add(BigInteger.ONE)) {
 			if (n.mod(i).equals(BigInteger.ZERO)) {
 				isPrime = false;
 			}

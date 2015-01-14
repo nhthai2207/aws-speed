@@ -16,33 +16,31 @@ public class TestPrime {
 	public static BigInteger primeNumber ;
 	public static BigInteger sqrt;
 	public static BigInteger lengthForThread;
+	public static BigInteger numberOfThread;
 	
-	public static void testPrime(int request, String sPrime) throws Exception{
+	public static void testPrime(int request, String sPrime, String sNumberOfThread) throws Exception{
 		primeNumber = new BigInteger(sPrime);
 		sqrt = Utils.sqrt(primeNumber);
-		lengthForThread = TestPrime.sqrt.divide(Utils.numberOfThread);
+		numberOfThread = new BigInteger(sNumberOfThread);
+		lengthForThread = TestPrime.sqrt.divide(numberOfThread);
+		System.out.println(String.format("Request: %s -- ThreadNums: %s ", request , sNumberOfThread));
 		for (int i = 0; i < 10; i++) {
+			Thread.sleep(500);
 			switch (request) {
-			case 1:
-				testForkJoin();
-				Thread.sleep(2000);
+			case 1:				
+				testForkJoin();				
 				break;
 			case 2:
-				testParalleStreaming();
-				Thread.sleep(2000);
+				testParalleStreaming();				
 				break;
 			case 3:
-				testLocalQueue();
-				Thread.sleep(2000);
+				testLocalQueue();				
 				break;
 			case 4:
-				testSingleThread();
-				Thread.sleep(2000);
+				testSingleThread();				
 				break;
-
 			}
-		}
-		
+		}		
 	}
 
 	private static void testSingleThread() throws Exception {
@@ -56,9 +54,8 @@ public class TestPrime {
 	private static void testLocalQueue() throws Exception {
 		long t1 = Calendar.getInstance().getTimeInMillis();
 		boolean isPrime = true;
-		BigInteger lengthForThread = sqrt.divide(Utils.numberOfThread);
-		int numberOfThread = Utils.numberOfThread.intValue();
-		ExecutorService executor = Executors.newFixedThreadPool(numberOfThread);
+				
+		ExecutorService executor = Executors.newFixedThreadPool(numberOfThread.intValue());
 		List<Callable<Boolean>> list = new ArrayList<Callable<Boolean>>();
 		for (BigInteger i = Utils.two; i.compareTo(sqrt) <= 0; i = i.add(lengthForThread)) {
 			Callable<Boolean> worker = new QueuePool(primeNumber, i, i.add(lengthForThread));
@@ -77,7 +74,7 @@ public class TestPrime {
 
 	private static void testParalleStreaming() {
 		ParallelStreaming mc = new ParallelStreaming();
-		mc.createList(Utils.two, sqrt);		
+		//mc.createList(Utils.two, sqrt);		
 		long t1 = Calendar.getInstance().getTimeInMillis();		
 		boolean isPrime = mc.isPrime();
 		long t2 = Calendar.getInstance().getTimeInMillis();		

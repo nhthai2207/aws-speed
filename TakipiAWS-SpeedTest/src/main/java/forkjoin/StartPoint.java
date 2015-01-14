@@ -19,7 +19,7 @@ public class StartPoint {
 		}
 
 		if (request == 2) {
-			TestPrime.testPrime(runCase, args[2]);
+			TestPrime.testPrime(runCase, args[2], args[3]);
 			return;
 		}
 	}	

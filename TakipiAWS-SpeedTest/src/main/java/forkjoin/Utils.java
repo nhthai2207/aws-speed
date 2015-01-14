@@ -10,20 +10,24 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.stream.Stream;
+
+import com.sun.j3d.utils.geometry.Primitive;
 
 import forkjoin.file.WordIndex;
+import forkjoin.prime.TestPrime;
 
 public class Utils {
 	public static BigInteger two = new BigInteger("2");
 	public static BigInteger three = new BigInteger("3");
 
 	
-	public static BigInteger numberOfThread = new BigInteger("10");
+	
 	public static String fileLocation = "/tmp/test.txt";
 	public static long numberLinePerThread = 10000;
 	public static long lineNum = 1838200;
@@ -88,9 +92,27 @@ public class Utils {
 		return result;
 	}
 	
+	
+	public static Boolean primeProcessPart(BigInteger from) {
+		boolean isPrime = true;
+		BigInteger to = from.add(TestPrime.lengthForThread);
+		for (BigInteger i = from; i.compareTo(to) <= 0; i = i.add(BigInteger.ONE)) {
+			if (TestPrime.primeNumber.mod(i).equals(BigInteger.ZERO)) {
+				isPrime = false;
+			}
+		}
+		return isPrime;
+	}
+	
 	public static void main(String[] args) {
-		System.out.println(Long.MAX_VALUE);
-		BigInteger probablePrime = BigInteger.probablePrime(57, new Random());
+		BigInteger x = new BigInteger("5");
+		BigInteger primeNumber = new BigInteger("10");
+		primeNumber = primeNumber.add(x);
+		
+		//BigInteger sqrt = Utils.sqrt(primeNumber);
+		System.out.println(primeNumber);
+		
+		BigInteger probablePrime = BigInteger.probablePrime(60, new Random());
 		System.out.println(probablePrime);
 	}
 }
