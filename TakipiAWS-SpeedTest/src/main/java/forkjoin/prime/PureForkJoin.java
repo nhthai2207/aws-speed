@@ -8,24 +8,22 @@ import java.util.concurrent.RecursiveTask;
 import forkjoin.Utils;
 
 public class PureForkJoin extends RecursiveTask<Boolean> {
-	private static final long serialVersionUID = -1883115459616562727L;
-	private BigInteger primeNumber;
+	private static final long serialVersionUID = -1883115459616562727L;	
 	private BigInteger from;
 	private BigInteger to;
-	
+	boolean isPrime = true;
 	
 
-	public PureForkJoin(BigInteger src, BigInteger start, BigInteger length) {
-		this.primeNumber = src;
+	public PureForkJoin( BigInteger start, BigInteger to) {
+		
 		this.from = start;
-		this.to = length;
+		this.to = to;
 		
 	}
 
-	private boolean computeDirectly() {
-		boolean isPrime = true;
-		for (BigInteger i = from; i.compareTo(to) <= 0; i = i.add(BigInteger.ONE)) {
-			if (this.primeNumber.mod(i).equals(BigInteger.ZERO)) {
+	private boolean computeDirectly() {		
+		for (BigInteger i = this.from; i.compareTo(this.to) <= 0; i = i.add(BigInteger.ONE)) {
+			if (TestPrime.primeNumber.mod(i).equals(BigInteger.ZERO)) {
 				isPrime = false;
 			}
 		}
@@ -39,9 +37,10 @@ public class PureForkJoin extends RecursiveTask<Boolean> {
 			return computeDirectly();			
 		}
 		BigInteger middle = to.add(from).divide(Utils.two);
-		PureForkJoin leftJoin = new PureForkJoin(primeNumber, from, middle);
-		PureForkJoin rightJoin = new PureForkJoin(primeNumber, middle.add(BigInteger.ONE), to);
-		return leftJoin.compute() && rightJoin.compute();		
+		PureForkJoin leftJoin = new PureForkJoin( this.from, middle);
+		PureForkJoin rightJoin = new PureForkJoin( middle.add(BigInteger.ONE), this.to);
+		invokeAll(leftJoin, rightJoin);
+		return leftJoin.isPrime && rightJoin.isPrime;		
 	}
 
 	public static void main(String[] args) {

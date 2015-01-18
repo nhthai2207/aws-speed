@@ -83,7 +83,7 @@ public class TestPrime {
 	}
 
 	private static void testForkJoin() {
-		PureForkJoin fb = new PureForkJoin(primeNumber, Utils.two, sqrt);
+		PureForkJoin fb = new PureForkJoin( Utils.two, sqrt);
 		ForkJoinPool pool = new ForkJoinPool();
 		long t1 = Calendar.getInstance().getTimeInMillis();
 		Boolean isPrime = pool.invoke(fb);

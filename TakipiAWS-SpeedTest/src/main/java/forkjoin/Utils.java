@@ -112,7 +112,7 @@ public class Utils {
 		//BigInteger sqrt = Utils.sqrt(primeNumber);
 		System.out.println(primeNumber);
 		
-		BigInteger probablePrime = BigInteger.probablePrime(60, new Random());
+		BigInteger probablePrime = BigInteger.probablePrime(61, new Random());
 		System.out.println(probablePrime);
 	}
 }
