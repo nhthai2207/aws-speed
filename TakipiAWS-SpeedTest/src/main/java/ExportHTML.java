@@ -17,7 +17,8 @@ public class ExportHTML {
 
 	public static Properties prop = new Properties();
 	public static Set<String> keySet = new HashSet<String>();
-	public static String moreDetail = "<td align=\"center\" style=\"font-size: 14px; line-height: 20px; font-family: Helvetica, Arial, sans-serif;\"><a href=\"$url$\" style=\"color: #18B2C3; text-decoration: none;\">More details</a></td>";
+	//public static String moreDetail = "<td align=\"center\" style=\"font-size: 14px; line-height: 20px; font-family: Helvetica, Arial, sans-serif;\"><a href=\"$url$\" style=\"color: #18B2C3; text-decoration: none;\">More details</a></td>";
+	public static String moreDetail = "<a href=\"$url$\" style=\"color: #18B2C3; text-decoration: none;\">More details</a>";
 	public static String contact = "<p><strong>Contact : </strong>$contact$ </p>";
 	public static String contact_news = "<tr> <td style=\"font-size: 12px; line-height: 26px; font-family: Helvetica, Arial, sans-serif;\"><strong>Contact :</strong> $contact$</td> </tr>"; 
 			
