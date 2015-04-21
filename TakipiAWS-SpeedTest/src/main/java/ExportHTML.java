@@ -63,8 +63,13 @@ public class ExportHTML {
 		File file = new File(srcFile);
 		Reader fr = new FileReader(file);
 		BufferedReader br = new BufferedReader(fr);
-
-		File tempFile = new File("Output_" + srcFile);
+		String outputLocation = "";
+		if(srcFile.contains("index")){
+			outputLocation = "DataOutput/index.html";
+		}else if (srcFile.contains("newsletter")){
+			outputLocation = "DataOutput/newsletter.html";
+		}
+		File tempFile = new File(outputLocation);
 		FileWriter fw = new FileWriter(tempFile);
 
 		while (br.ready()) {
