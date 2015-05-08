@@ -1,0 +1,324 @@
+@font-face {
+	font-family: 'exo_2.0medium';
+	src: url('../fonts/exo2.0-medium-webfont.eot');
+	src: url('../fonts/exo2.0-medium-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/exo2.0-medium-webfont.woff') format('woff'),
+		url('../fonts/exo2.0-medium-webfont.ttf') format('truetype'),
+		url('../fonts/exo2.0-medium-webfont.svg#exo_2.0medium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'exo_2.0light';
+	src: url('../fonts/exo2.0-light-webfont.eot');
+	src: url('../fonts/exo2.0-light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/exo2.0-light-webfont.woff') format('woff'),
+		url('../fonts/exo2.0-light-webfont.ttf') format('truetype'),
+		url('../fonts/exo2.0-light-webfont.svg#exo_2.0light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'exo_2.0regular';
+	src: url('../fonts/exo2.0-regular-webfont.eot');
+	src: url('../fonts/exo2.0-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/exo2.0-regular-webfont.woff') format('woff'),
+		url('../fonts/exo2.0-regular-webfont.ttf') format('truetype'),
+		url('../fonts/exo2.0-regular-webfont.svg#exo_2.0regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'exo_2.0semi_bold';
+	src: url('../fonts/exo2.0-semibold-webfont.eot');
+	src: url('../fonts/exo2.0-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/exo2.0-semibold-webfont.woff') format('woff'),
+		url('../fonts/exo2.0-semibold-webfont.ttf') format('truetype'),
+		url('../fonts/exo2.0-semibold-webfont.svg#exo_2.0semi_bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'exo_2.0bold';
+	src: url('../fonts/exo2.0-bold-webfont.eot');
+	src: url('../fonts/exo2.0-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/exo2.0-bold-webfont.woff') format('woff'),
+		url('../fonts/exo2.0-bold-webfont.ttf') format('truetype'),
+		url('../fonts/exo2.0-bold-webfont.svg#exo_2.0bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'exo_2.0regular';
+		src: url('../fonts/exo2.0-regular-webfont.svg#exo_2.0regular') format('svg');
+	}
+}
+/* General Reset */
+body{
+	margin:0;
+	color:#383838;
+	font: 15px/24px 'exo_2.0light',sans-serif;
+	background:#fff;
+	min-width:915px;
+}
+p{margin:0 0 11px;}
+img{border-style:none;}
+input,
+textarea,
+select{
+	color:#000;
+	vertical-align:middle;
+	font:100% Verdana, Geneva, sans-serif;
+	-webkit-appearance: none;
+}
+form,fieldset{
+	margin:0;
+	padding:0;
+	border-style:none;
+}
+blockquote, q{quotes: none;}
+q:before,
+q:after {content: '';}
+a{
+	color:#18b2c3;
+	text-decoration:none;
+}
+a:hover{text-decoration:underline;}
+a:focus,
+input:focus,
+textarea:focus,
+select:focus{outline:none;}
+header, nav, section, article, aside, footer{display:block;}
+/* General settings */
+.container{
+	width:920px;
+	margin:0 auto;
+}
+.container:after{	clear:both;	content:'';	display:block;}
+/*header*/
+#header{
+	background:url(../images/bg-header.jpg) no-repeat;
+	min-height:381px;
+	background-size:cover;
+	border-bottom:3px solid #18b2c3;
+	overflow:hidden;
+	padding-top:95px;
+}
+.logo-holder{
+	width:359px;
+	background:#fff;
+	margin:0 auto;
+	text-align:center;
+	overflow:hidden;
+	background:url(../images/bg-logo-holder.png) no-repeat;
+	background-size:cover;
+	padding-top:22px;
+	font: 19px/22px 'exo_2.0medium', sans-serif;
+	color:#7a7a7a;
+	padding:22px 30px 26px;
+}
+#header .logo{	display:block;
+	margin:0 auto 9px;	text-indent:-9999px;	overflow:hidden;	background:url(../images/logo.png) no-repeat;
+	width:296px;
+	height:90px;}#header .logo a{	display:block;	height:100%;}
+#header p{margin:0;}
+/*signup-holder*/
+.intro{
+	width:915px;
+	margin:-134px auto 62px;
+	position:relative;
+	z-index:10;
+}
+.intro:before{
+	content:'';
+	position:absolute;
+	width:901px;
+	height:100%;
+	top:0;
+	left:4px;
+	background:#18b2c3;
+	-webkit-transform: rotate(1.3deg);
+	-moz-transform: rotate(1.3deg);
+	-o-transform: rotate(1.3deg);
+	-ms-transform: rotate(1.3deg);
+	transform: rotate(1.3deg);
+	z-index:-1;
+}
+.intro:after{	content:'';
+	position:absolute;
+	width:900px;
+	height:94%;
+	left:-6px;
+	background:url(../images/bg-ie-02.png) no-repeat;
+	width:919px;
+	height:276px;
+	bottom:-9px;
+	z-index:-1;}
+.intro .holder{
+	background:#fff;
+	background:#fff url(../images/bg-signup.gif) repeat-y 100% 0;
+	padding:25px 41px;
+}
+.intro .holder:after{	clear:both;	content:'';	display:block;}
+.intro .text{
+	background:#fff;
+	width:467px;
+	float:left;
+	text-align:justify;
+}
+.intro .signup-form{
+	float:right;
+	width:272px;
+	padding-top:15px;
+}
+.intro .signup-form label{
+	padding-bottom:2px;
+	display:inline-block;
+	font: 16px/24px 'exo_2.0light',sans-serif;
+}
+.intro .signup-form .txt{
+	display:block;
+	font: 15px/19px 'exo_2.0light', sans-serif;
+	height:19px;
+	margin-bottom:16px;
+	padding:3px 10px;
+	border:1px solid #e9e9e9;
+	-webkit-box-shadow: inset 1px 10px 0px -9px #CCCCCC;
+	-moz-box-shadow: inset 1px 10px 0px -9px #CCCCCC;
+	box-shadow: inset 1px 10px 0px -9px #CCCCCC;
+	width:256px;
+	position:relative;
+}
+.intro .signup-form .btn{
+	color:#fff;
+	background:#18b2c3;
+	border-bottom:3px solid #128c99;
+	border-right:none;
+	border-left:none;
+	border-top:none;
+	cursor:pointer;
+	width:278px;
+	margin-top:6px;
+	padding: 3px 0;
+	font: 16px/20px 'exo_2.0regular', sans-serif;
+	min-height:31px;
+	-webkit-transition: background-color 0.2s ease;
+	-moz-transition: background-color 0.2s ease;
+	-o-transition: background-color 0.2s ease;
+	transition: background-color 0.2s ease;
+}
+.intro .signup-form .btn:hover{background:#13a3b3;}
+.intro .signup-form .btn:active{
+	background:#13a3b3;
+	border-bottom:1px solid #128c99;
+	margin-top:7px;
+	outline:none;
+}
+.intro .signup-form .message{
+	font: 24px/35px 'exo_2.0light', sans-serif;
+	text-align:center;
+	padding:71px 0;
+	margin-left:-9px;
+	display:none;
+}
+.intro .text h2{
+	margin:0;
+	color:#18b2c3;
+	font: 15px/25px 'exo_2.0medium',sans-serif;
+}
+.intro .text p{margin:0;}
+/*main*/
+#main{padding-bottom:10px;}
+.date{
+	margin:0 0 24px;
+	font: 18px/20px 'exo_2.0regular', sans-serif;
+	background:#f7f7f7;
+	color:#383838;
+	padding:5px 18px;
+}
+.date span{color:#18b2c3;}
+/*info-block*/
+.info-block{
+	margin:0 0 12px;	padding:0;	list-style:none;	overflow:hidden;
+}
+.info-block li{
+	border:1px solid #e4e4e4;
+	padding:14px 24px;
+	overflow:hidden;
+	position:relative;
+	margin-bottom:26px;
+}
+.info-block li:after{	content:'';
+	position:absolute;
+	background:url(../images/ico-01.png) no-repeat;
+	width:21px;
+	height:18px;
+	right:0;
+	top:0;}
+/*.info-block li:before{
+	content:'';
+	position:absolute;
+	background:#18b2c3;
+	width:1px;
+	left:210px;
+	top:22px;
+	bottom:22px;
+}*/
+.info-block li .contact-box{
+	border-right:1px solid #18b2c3;
+	padding-right:20px;
+	width:185px;
+	float:left;
+	margin-right: 38px;
+	font: 14px/20px 'exo_2.0regular', sans-serif;
+	margin-top:15px;
+}
+.info-block li .contact-box .img{
+	text-align:center;
+	margin-bottom:10px;
+}
+.info-block li .contact-box .img img{vertical-align:top;}
+.info-block li .contact-box h3{
+	font: 18px/24px 'exo_2.0semi_bold', sans-serif;
+	margin:0 0 1px;
+	text-align:center;
+}
+.info-block li .contact-box dl{
+	margin:0;
+	overflow:hidden;
+}
+.info-block li .contact-box dt{
+	float:left;
+	margin-bottom:6px;
+}
+.info-block li .contact-box dd{
+	text-align:center;
+	margin: 0px;
+}
+.info-block li .main-info{
+	overflow:hidden;
+	font: 12px/26px Arial, sans-serif;
+}
+
+.info-block li .main-info p{margin:0 0 2px;}
+#main .text-center{text-align:center;}
+/*footer*/
+#footer{
+	background:#f0f0f0;
+	border-top:8px solid #18b2c3;
+	padding-bottom:28px;
+}
+#footer .logo{	float:left;	text-indent:-9999px;	background:url(../images/footer-logo.png) no-repeat;
+	width:117px;
+	height:37px;
+	margin-left:-8px;
+	position:relative;
+	z-index:10;}
+#footer .logo:after{
+	position:absolute;
+	left:0;
+	top:0;	content:'';	background: url(../images/bg-box-footer.png) no-repeat 100% 100%;
+	width:120px;
+	height:41px;
+	z-index:-1;}#footer .logo a{	display:block;	height:100%;}

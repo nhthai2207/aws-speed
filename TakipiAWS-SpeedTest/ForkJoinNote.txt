@@ -1,0 +1,9 @@
+Fork/Join: 
+	+ http://docs.oracle.com/javase/tutorial/essential/concurrency/forkjoin.html
+
+Parallel Streaming: 
+	+ http://www.infoq.com/articles/forkjoin-to-parallel-streams
+	+ http://java.dzone.com/articles/think-twice-using-java-8
+	
+	
+
