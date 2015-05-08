@@ -1,0 +1,44 @@
+{
+  "_id": "554c35344eb0789da5c9af06",
+  "index": 0,
+  "guid": "7777f3d7-6272-4e65-ac3e-3c24e0199285",
+  "isActive": false,
+  "balance": "$2,929.24",
+  "picture": "http://placehold.it/32x32",
+  "age": 31,
+  "eyeColor": "green",
+  "name": "Winnie Johns",
+  "gender": "female",
+  "company": "TALKOLA",
+  "email": "winniejohns@talkola.com",
+  "phone": "+1 (990) 499-3953",
+  "address": "621 Ide Court, Fairfield, Puerto Rico, 3067",
+  "about": "Duis ullamco ut voluptate aliqua aute. Laboris cupidatat laboris voluptate labore cupidatat proident aute. Nostrud ullamco commodo exercitation irure sit et adipisicing et proident enim. Est proident fugiat eu magna eiusmod velit magna pariatur. Incididunt consequat quis velit id dolore nostrud. Mollit reprehenderit ad nostrud et ad cillum labore adipisicing magna velit commodo.\r\n",
+  "registered": "2014-07-26T08:58:51 -07:00",
+  "latitude": 58.149367,
+  "longitude": 34.352089,
+  "tags": [
+    "commodo",
+    "voluptate",
+    "dolor",
+    "Lorem",
+    "adipisicing",
+    "minim"
+  ],
+  "friends": [
+    {
+      "id": 0,
+      "name": "Gill Daniels"
+    },
+    {
+      "id": 1,
+      "name": "Donna Jacobson"
+    },
+    {
+      "id": 2,
+      "name": "Lester Vincent"
+    }
+  ],
+  "greeting": "Hello, Winnie Johns! You have 8 unread messages.",
+  "favoriteFruit": "banana"
+}

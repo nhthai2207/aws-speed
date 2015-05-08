@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="var" path="M2_REPO/javax/json/javax.json-api/1.0/javax.json-api-1.0.jar" sourcepath="M2_REPO/javax/json/javax.json-api/1.0/javax.json-api-1.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/sp/.m2/repository/javax/json/javax.json-api/1.0/javax.json-api-1.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="M2_REPO/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar" sourcepath="M2_REPO/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/google/code/gson/gson/2.3.1/gson-2.3.1.jar" sourcepath="M2_REPO/com/google/code/gson/gson/2.3.1/gson-2.3.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/sp/.m2/repository/com/google/code/gson/gson/2.3.1/gson-2.3.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.5.3/jackson-databind-2.5.3.jar" sourcepath="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.5.3/jackson-databind-2.5.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/sp/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.5.3/jackson-databind-2.5.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.5.0/jackson-annotations-2.5.0.jar" sourcepath="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.5.0/jackson-annotations-2.5.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/sp/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.5.0/jackson-annotations-2.5.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.5.3/jackson-core-2.5.3.jar" sourcepath="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.5.3/jackson-core-2.5.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/sp/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.5.3/jackson-core-2.5.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/glassfish/javax.json/1.0.4/javax.json-1.0.4.jar" sourcepath="M2_REPO/org/glassfish/javax.json/1.0.4/javax.json-1.0.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/sp/.m2/repository/org/glassfish/javax.json/1.0.4/javax.json-1.0.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
