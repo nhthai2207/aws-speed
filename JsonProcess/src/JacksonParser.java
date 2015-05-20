@@ -19,12 +19,9 @@ public class JacksonParser extends Parser {
 			JsonNode rootNode = mapper.readTree(fileReader);
 			Iterator<JsonNode> ite = rootNode.iterator();				 
 			while (ite.hasNext()) {
-				JsonNode temp = ite.next();
-				//System.out.println(temp); 
+				JsonNode temp = ite.next(); 
 			}
- 
-			
-			
+			fileReader.close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

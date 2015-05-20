@@ -5,14 +5,14 @@ public class StartPoint {
 
 	public static void main(String[] args) {
 		// Will comment this line when actual run
-		args = new String[] { "JSONP", "jsondata/01.json", "100" };
+		//args = new String[] { "JSONP", "01", "10000" };
 		if (args.length != 3) {
 			System.out
 					.println("You must enter the valid 3 arguments: Type of Json Object (1: Jsonp, 2: Fangiong, 3: Gson, 4: Jackson), FullFileLocation, NumberOfRun");
 			return;
 		}		
 		ParserLib parserLib = ParserLib.valueOf(args[0].toUpperCase());
-		String fullFileLocation = args[1];
+		String fullFileLocation = String.format("/tmp/%s.json", args[1]);
 		int numberOfRun = Integer.valueOf(args[2]);
 		Parser parser = null;
 		switch (parserLib) {

@@ -15,13 +15,14 @@ public class FangiongParser extends Parser {
 	public void process() {
 		try {
 			JSONParser parser = new JSONParser();
-			Object obj = parser.parse(new FileReader(this.fullFileDir));
+			FileReader fileReader = new FileReader(this.fullFileDir);
+			Object obj = parser.parse(fileReader);
 			JSONObject json = (JSONObject) obj;
 			Set<String> keySet = json.keySet();
 			for(String key : keySet){
-				Object object = json.get(key);
-				System.out.println(object);				
+				Object object = json.get(key);						
 			}
+			fileReader.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

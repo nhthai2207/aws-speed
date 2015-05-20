@@ -16,13 +16,14 @@ public class GsonParser extends Parser {
 	public void process() {
 		try {
 			JsonParser parser = new JsonParser();
-			JsonElement jsonElement = parser.parse(new FileReader(this.fullFileDir));
+			FileReader fileReader = new FileReader(this.fullFileDir);
+			JsonElement jsonElement = parser.parse(fileReader);
 			JsonObject asJsonObject = jsonElement.getAsJsonObject();
 			Set<Entry<String, JsonElement>> entrySet = asJsonObject.entrySet();
 			for (Entry<String, JsonElement> entry : entrySet) {
 				JsonElement value = entry.getValue();
-				System.out.println(value);
 			}
+			fileReader.close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

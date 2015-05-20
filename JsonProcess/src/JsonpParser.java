@@ -15,13 +15,14 @@ public class JsonpParser extends Parser {
 	@Override
 	public void process() {
 		try {
-			JsonReader reader = Json.createReader(new FileReader(this.fullFileDir));
+			FileReader fileReader = new FileReader(this.fullFileDir);
+			JsonReader reader = Json.createReader(fileReader);
 			JsonObject readObject = reader.readObject();
 			Set<String> keySet = readObject.keySet();
 			for(String key : keySet){
 				JsonValue jsonValue = readObject.get(key);
-				//System.out.println(jsonValue);
 			}			
+			fileReader.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
